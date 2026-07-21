@@ -1,0 +1,275 @@
+---
+title: "Mis comandos Unix"
+---
+**determina tu ubicación:**
+
+```{bash}
+ls -la
+pwd
+```
+
+**dirigite a tus archivos**
+
+```{bash}
+cd /Volumes/MAC-1/BIOLOGIA-DE-SISTEMAS-PRE-2026/practica-unix/
+```
+
+**Mira los archivos de tu ubicación**
+
+```{bash}
+ls
+```
+
+**Crea un directorio**
+```{bash}
+mkdir genoma
+```
+
+**Observa si creaste la carpeta genoma**
+```{bash}
+ls
+```
+
+**Haz una copia del archivo wolbachia.fna en la carpeta genoma**
+```{bash}
+cp wolbachia.fna genoma/
+```
+
+**Ingresa a la carpeta genoma y verifica si esta la copia del archivo wolbachia.fna**
+```{bash}
+cd genoma/
+ls
+```
+
+**Renombra el archivo wolbachia.fna con otro nombre**
+```{bash}
+mv wolbachia.fna wolbachia-copia.fna
+ls
+```
+
+**Haz una copia del archivo wolbachia-copia.fna y renombrala como wolbachia-original.fna**
+```{bash}
+cp wolbachia-copia.fna wolbachia-original.fna 
+ls
+```
+
+**Eimina el archvio wolbachia-copia.fna**
+```{bash}
+rm wolbachia-copia.fna
+ls
+```
+
+**crea una nueva carpeta**
+```{bash}
+mkdir nueva-carpeta
+ls
+```
+
+**Elimina la nueva carpeta creada**
+```{bash}
+rm nueva-carpeta
+ls
+```
+
+**Qué paso, por qué no se elimina?, cual es la manera correcta para eliminar una carpeta**
+```{bash}
+rm -rf nueva-carpeta
+ls
+```
+
+**Muevete hacia atras**
+```{bash}
+cd ..
+ls
+```
+
+**Inspecciona el archivo wolbachia.fna con less, luego presiona entre en la terminal que pasa?, como salgo?**
+```{bash}
+less wolbachia.fna
+```
+
+**Inspecciona el archivo seq_dna.fasta con tail -n con una valor, qué nos muestra?**
+```{bash}
+tail -n 2 wolbachia-pro.fasta
+```
+
+```{bash}
+tail -n 3 wolbachia-pro.fasta
+```
+
+**Inspecciona el archivo seq_dna.fasta con head -n con una valor, qué nos muestra?**
+```{bash}
+head -n 2 wolbachia-pro.fasta
+```
+
+```{bash}
+head -n 4 wolbachia-pro.fasta
+```
+
+```{bash}
+head  wolbachia-pro.fasta
+```
+
+**Mueve a la carpeta sequences-single y lista los archivos**
+```{bash}
+cd sequences-single
+ls
+```
+
+**Concatena dos archivos dale un nombre de salida, lista y corrobora que hay dentro del archivo creado**
+```{bash}
+cat seq1.fasta seq2.fasta > seqs1-2.fasta
+ls
+more seqs1-2.fasta
+```
+
+**Crea una carpeta para mover el archivo concatenado**
+```{bash}
+mkdir concatenados
+mv seqs1-2.fasta concatenados
+ls
+ls concatenados
+```
+
+**Concatena todos los archivos y dale un nombre de salida, lista, imprime las primeras 28 lineas del archivo creado**
+```{bash}
+cat *.fasta > all-conca.fasta
+ls
+head -n 28 all-conca.fasta
+```
+
+**Cuenta cuantas lineas hay all-conca.fasta en con wc**
+```{bash}
+wc -l all-conca.fasta
+```
+
+**Contar cuántos archivos hay dentro de la carpeta actual**
+```{bash}
+ls  | wc -l
+```
+
+**Identifica el sie el formato del archivo all-conca.fasta es ASCII text**
+```{bash}
+file all-conca.fasta
+```
+
+**TUBERIAS |**
+**Contar cuántos archivos hay en la carpeta anterior**
+
+```{bash}
+ls ../ | wc -l
+```
+
+**Muevete a la carpeta anterior**
+```{bash}
+cd ..
+```
+
+**Extrae la columna 1 con cut del archivo animals.csv**
+```{bash}
+cut -d "," -f 1 animals.csv 
+```
+
+**Extrae la columna 2 y 3 con cut del archivo animals.csv**
+
+```{bash}
+cut -d "," -f 2,3 animals.csv 
+```
+
+**Ordena y limpia animals.csv con sort y uniq**
+```{bash}
+cut -d "," -f 2 animals.csv | sort | uniq
+```
+
+**Qué paso acá?**
+```{bash}
+cut -d "," -f 2,3 animals.csv | sort | uniq
+```
+
+**Buscar con grep**
+```{bash}
+grep "rabbit" animals.csv 
+```
+
+**Qué paso acá?**
+```{bash}
+grep "rabbit" animals.csv | grep -v "22"
+```
+
+**Qué paso acá?**
+```{bash}
+grep "rabbit" animals.csv | grep "22"
+```
+
+**Qué paso acá?**
+```{bash}
+grep -E "rabbit|bear" animals.csv
+```
+
+**Muevete a sequences-single y filtremos con grep dominios HD en el archivo sequences-single**
+```{bash}
+cd sequences-single
+grep "hd" all-conca.fasta
+```
+
+```{bash}
+cd sequences-single
+grep "HD" all-conca.fasta
+```
+
+**Y si quisieramos que nos muestre por secuencia y resalte en color**
+```{bash}
+grep -E --color ">|HD" all-conca.fasta
+```
+
+**Encontremos archivos con find. Pero antes muevete atras**
+```{bash}
+cd ..
+ls
+```
+
+```{bash}
+find sequences-single -name "*.fasta"
+```
+
+**Qué paso acá?**
+```{bash}
+find * -name "*.fasta"
+```
+
+**Qué paso acá?**
+```{bash}
+find . -name "*.fasta"
+```
+
+**Qué paso acá?**
+```{bash}
+find . -name "seqs1-2.fasta"
+```
+
+**crea un script bash script.sh**
+```{bash}
+nano script1.sh
+```
+
+**dale permisos de ejecucion**
+```{bash}
+chmod +x script1.sh
+```
+
+**ejecuta**
+```{bash}
+./script1.sh
+```
+
+**ejm loop for**
+```{bash}
+nano script2.sh
+```
+
+```{bash}
+chmod +x script2.sh
+./script2.sh
+```
+
+**Para profundizar en los books_notes hay libros sobre bash y linux**
