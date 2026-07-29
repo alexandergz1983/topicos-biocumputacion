@@ -114,9 +114,13 @@ git push origin main
 
 # actualizar un archivo, debe tener el mismo nombre 
 
-git add 2-MARKDOWN-UNIX-GIT-GITHUB.pdf
+git add practica-git-github/step-step-git-github.txt 
 
-git commit -m "Se actualiza el archivo pdf"
+o desde la ubicacion dentro del directorio donde este step-step-git-github.txt 
+
+git add step-step-git-github.txt 
+
+git commit -m "Se actualiza el archivo step-step-git-github.txt"
 
 git push origin main
 
