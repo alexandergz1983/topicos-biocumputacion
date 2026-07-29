@@ -1,25 +1,33 @@
 ---
 title: "Markdown"
-format: html
-editor_options: 
+engines:
+- path: "/Applications/Positron.app/Contents/Resources/app/quarto/share/extension-subtrees/julia-engine/\\_extensions/julia-engine/julia-engine.js"
+editor_options:
   chunk_output_type: inline
+toc-title: Table of contents
 ---
 
 # 1. ¿Qué es Markdown?
 
-Markdown es un lenguaje de marcado ligero creado por John Gruber en 2004. Su filosofía es ser fácil de leer y escribir en texto plano, y convertirse fácilmente a HTML.
+Markdown es un lenguaje de marcado ligero creado por John Gruber en
+2004. Su filosofía es ser fácil de leer y escribir en texto plano, y
+convertirse fácilmente a HTML.
 
 **¿Por qué es esencial en bioinformática?**
 
-Los archivos README.md son el estándar en repositorios de GitHub/GitLab para pipelines (Nextflow, Snakemake, WDL). Se usa en Jupyter Notebooks para documentar análisis.
+Los archivos README.md son el estándar en repositorios de GitHub/GitLab
+para pipelines (Nextflow, Snakemake, WDL). Se usa en Jupyter Notebooks
+para documentar análisis.
 
-Herramientas como MultiQC, nf-core y Galaxy generan reportes en Markdown.
+Herramientas como MultiQC, nf-core y Galaxy generan reportes en
+Markdown.
 
 ## Es el formato de documentación de paquetes en Bioconductor y PyPI.
 
 # 2. Encabezados
 
-Se usan símbolos \# al inicio de la línea. El número de \# indica el nivel (1–6).
+Se usan símbolos \# al inicio de la línea. El número de \# indica el
+nivel (1--6).
 
 **ejm:**
 
@@ -55,20 +63,24 @@ Se usan símbolos \# al inicio de la línea. El número de \# indica el nivel (1
 
 **Párrafos**
 
-Deja una **línea en blanco** entre bloques de texto para crear párrafos separados.
+Deja una **línea en blanco** entre bloques de texto para crear párrafos
+separados.
 
 **ejm:**
 
 El genoma de *Escherichia coli* K-12 tiene aproximadamente 4.6 Mb.
 
-Contiene alrededor de 4,288 genes codificantes de proteínas según la anotación de RefSeq.
+Contiene alrededor de 4,288 genes codificantes de proteínas según la
+anotación de RefSeq.
 
 **Saltos de línea simples**
 
-Añade dos espacios al final de la línea o usa **\< br \>** pero sin espacios entre br y los simbolos que le rodean
+Añade dos espacios al final de la línea o usa **\< br \>** pero sin
+espacios entre br y los simbolos que le rodean
 
 **ejm 1:**\
-Secuencia forward: ATCGATCGATCG<br> Secuencia reverse: CGATCGATCGAT
+Secuencia forward: ATCGATCGATCG`<br>`{=html} Secuencia reverse:
+CGATCGATCGAT
 
 **ejm 2: Qué paso acá?**\
 Secuencia forward: ATCGATCGATCG. Secuencia reverse: CGATCGATCGAT
@@ -79,15 +91,21 @@ Secuencia forward: ATCGATCGATCG. Secuencia reverse: CGATCGATCGAT
 
 ![**Mi Tabla**](fig/1.png)
 
-[![Logo Ensembl](https://www.ensembl.org/img/ensembl_logo.png)](https://www.ensembl.org)
+<figure>
+<a href="https://www.ensembl.org"><img
+src="https://www.ensembl.org/img/ensembl_logo.png" /></a>
+<figcaption>Logo Ensembl</figcaption>
+</figure>
 
 **ejm:**
 
 El gen ***TP53*** está mutado en el 50% de los cánceres humanos.
 
-Se utilizó **DESeq2** con un umbral de *log2FoldChange* \> 1 y `padj < 0.05`.
+Se utilizó **DESeq2** con un umbral de *log2FoldChange* \> 1 y
+`padj < 0.05`.
 
-El alineador ~~Bowtie1~~ **Bowtie2** fue seleccionado por su soporte de gaps.
+El alineador ~~Bowtie1~~ **Bowtie2** fue seleccionado por su soporte de
+gaps.
 
 ------------------------------------------------------------------------
 
@@ -151,23 +169,30 @@ Usa números seguidos de punto.
 
 **ejm:**
 
-- Base de datos de referencia: [NCBI GenBank](https://www.ncbi.nlm.nih.gov/genbank/)
-- Buscador de ontologías: [AmiGO (Gene Ontology)](http://amigo.geneontology.org/)
-- Repositorio de datos: [GEO Dataset GSE12345](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE12345)
-- Documentación: [DESeq2 en Bioconductor](https://bioconductor.org/packages/release/bioc/html/DESeq2.html "Documentación oficial de DESeq2")
+- Base de datos de referencia: [NCBI
+  GenBank](https://www.ncbi.nlm.nih.gov/genbank/)
+- Buscador de ontologías: [AmiGO (Gene
+  Ontology)](http://amigo.geneontology.org/)
+- Repositorio de datos: [GEO Dataset
+  GSE12345](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE12345)
+- Documentación: [DESeq2 en
+  Bioconductor](https://bioconductor.org/packages/release/bioc/html/DESeq2.html "Documentación oficial de DESeq2")
 
 **Enlaces con referencia (útil para documentos largos)**
 
 **ejm:**
 
-El alineamiento se realizó con BWA-MEM2 [1](https://github.com/bwa-mem2/bwa-mem2 "BWA-MEM2 GitHub") y las variantes se llamaron con GATK [2](https://gatk.broadinstitute.org/ "Genome Analysis Toolkit").
+El alineamiento se realizó con BWA-MEM2
+[1](https://github.com/bwa-mem2/bwa-mem2 "BWA-MEM2 GitHub") y las
+variantes se llamaron con GATK
+[2](https://gatk.broadinstitute.org/ "Genome Analysis Toolkit").
 
 **Enlaces automáticos**
 
 **ejm:**
 
 <https://www.uniprot.org/uniprotkb/P04637/entry>\
-[mailto:bioinfo\@lab.edu](mailto:bioinfo@lab.edu){.uri}
+[mailto:bioinfo@lab.edu](mailto:bioinfo@lab.edu){.uri}
 
 ------------------------------------------------------------------------
 
@@ -180,7 +205,11 @@ El alineamiento se realizó con BWA-MEM2 [1](https://github.com/bwa-mem2/bwa-mem
 
 **Imagen con enlace**
 
-[![Logo Ensembl](https://www.ensembl.org/img/ensembl_logo.png)](https://www.ensembl.org)
+<figure>
+<a href="https://www.ensembl.org"><img
+src="https://www.ensembl.org/img/ensembl_logo.png" /></a>
+<figcaption>Logo Ensembl</figcaption>
+</figure>
 
 ------------------------------------------------------------------------
 
@@ -192,7 +221,8 @@ Rodea el código con comillas invertidas (backticks) \`.
 
 **ejm:**
 
-Ejecuta `samtools flagstat aligned.bam` para obtener estadísticas de alineamiento.\
+Ejecuta `samtools flagstat aligned.bam` para obtener estadísticas de
+alineamiento.\
 El gen `BRCA1` se encuentra en el cromosoma 17q21.31.
 
 ## 8.2 Bloques de Código
@@ -203,7 +233,7 @@ Usa triple backtick \`\`\` con el lenguaje para resaltado de sintaxis.
 
 **ejm:**
 
-```{bash}
+``` {bash}
 # Descarga de datos desde SRA
 fasterq-dump SRR1234567 --threads 8
 
@@ -288,9 +318,9 @@ DEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYPQGLNGTVNLPGRNSFEV
 
 **ejm:**
 
-| Columna 1 | Columna 2 | Columna 3 |
-|-----------|-----------|-----------|
-| Dato 1    | Dato 2    | Dato 3    |
+  Columna 1   Columna 2   Columna 3
+  ----------- ----------- -----------
+  Dato 1      Dato 2      Dato 3
 
 **Alineación**
 
@@ -298,23 +328,39 @@ DEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYPQGLNGTVNLPGRNSFEV
 
 **Ejm:** Resumen de Muestras de RNA-Seq
 
-| Muestra | Condición | Réplica | Lecturas (M) | \% Mapeo | Genes Detectados |
-|:--------|:---------:|:-------:|-------------:|---------:|-----------------:|
-| WT_1    |  Control  |    1    |         42.3 |     94.2 |           18,432 |
-| WT_2    |  Control  |    2    |         38.7 |     93.8 |           17,985 |
-| WT_3    |  Control  |    3    |         45.1 |     95.1 |           18,701 |
-| KO_1    | Knockout  |    1    |         41.0 |     92.5 |           16,234 |
-| KO_2    | Knockout  |    2    |         39.5 |     91.9 |           15,876 |
-| KO_3    | Knockout  |    3    |         43.8 |     93.4 |           16,543 |
+  ---------------------------------------------------------------------------
+  Muestra    Condición   Réplica   Lecturas (M)   \% Mapeo   Genes Detectados
+  --------- ----------- --------- ------------- ---------- ------------------
+  WT_1        Control       1              42.3       94.2             18,432
+
+  WT_2        Control       2              38.7       93.8             17,985
+
+  WT_3        Control       3              45.1       95.1             18,701
+
+  KO_1       Knockout       1              41.0       92.5             16,234
+
+  KO_2       Knockout       2              39.5       91.9             15,876
+
+  KO_3       Knockout       3              43.8       93.4             16,543
+  ---------------------------------------------------------------------------
 
 **Ejm:** Comparación de Herramientas
 
-| Herramienta | Tipo            | Lenguaje | Tiempo (h) | RAM (GB) | Publicación        |
-|------------|------------|------------|-----------:|-----------:|------------|
-| STAR        | Spliced aligner | C++      |        0.5 |       30 | Dobin et al., 2013 |
-| HISAT2      | Spliced aligner | C++      |        1.2 |        8 | Kim et al., 2019   |
-| Salmon      | Pseudoaligner   | C++      |        0.1 |        4 | Patro et al., 2017 |
-| Kallisto    | Pseudoaligner   | C++      |       0.08 |        3 | Bray et al., 2016  |
+  -------------------------------------------------------------------------------
+  Herramienta   Tipo            Lenguaje     Tiempo (h)    RAM (GB) Publicación
+  ------------- --------------- ----------- ----------- ----------- -------------
+  STAR          Spliced aligner C++                 0.5          30 Dobin et al.,
+                                                                    2013
+
+  HISAT2        Spliced aligner C++                 1.2           8 Kim et al.,
+                                                                    2019
+
+  Salmon        Pseudoaligner   C++                 0.1           4 Patro et al.,
+                                                                    2017
+
+  Kallisto      Pseudoaligner   C++                0.08           3 Bray et al.,
+                                                                    2016
+  -------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
@@ -324,17 +370,22 @@ DEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYPQGLNGTVNLPGRNSFEV
 
 **ejm:**
 
-> "The central dogma of molecular biology deals with the detailed residue-by-residue transfer of sequential information." — Francis Crick, 1970
+> "The central dogma of molecular biology deals with the detailed
+> residue-by-residue transfer of sequential information." --- Francis
+> Crick, 1970
 
 **Cita anidada**
 
 **ejm:**
 
-> El análisis de expresión diferencial reveló 1,247 genes significativamente regulados.
+> El análisis de expresión diferencial reveló 1,247 genes
+> significativamente regulados.
 >
-> > De estos, 834 estaban sobreexpresados (log2FC \> 1) y 413 subexpresados (log2FC \< -1).
+> > De estos, 834 estaban sobreexpresados (log2FC \> 1) y 413
+> > subexpresados (log2FC \< -1).
 > >
-> > > El gen más sobreexpresado fue *IL6* (log2FC = 5.3, padj = 2.1e-45).
+> > > El gen más sobreexpresado fue *IL6* (log2FC = 5.3, padj =
+> > > 2.1e-45).
 
 **ejm lista anidada**
 
@@ -346,7 +397,9 @@ DEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYPQGLNGTVNLPGRNSFEV
 
 **ejm:**
 
-> **Nota importante:** Los archivos BAM deben estar ordenados por coordenadas antes de ejecutar `bcftools mpileup`. Consulta la [documentación de Samtools](https://www.htslib.org/).
+> **Nota importante:** Los archivos BAM deben estar ordenados por
+> coordenadas antes de ejecutar `bcftools mpileup`. Consulta la
+> [documentación de Samtools](https://www.htslib.org/).
 
 ------------------------------------------------------------------------
 
@@ -395,14 +448,6 @@ Resultados del variant calling:
 - [ ] Interpretación clínica (ACMG guidelines)
 - [ ] Subida de resultados a base de datos interna
 
-```{python}
-
-```
-
-```{python}
-
-```
-
 ------------------------------------------------------------------------
 
 # 13. Notas al Pie
@@ -413,17 +458,11 @@ Resultados del variant calling:
 
 Texto con nota al pie[^1].
 
-[^1]: Fisher, R.A. (1922). On the interpretation of χ² from contingency tables.
-
 **Ejemplo en Bioinformática**
 
-El análisis de enriquecimiento se realizó usando el test de Fisher exacto[^2] con corrección de Benjamini-Hochberg[^3]. Los genes de referencia se obtuvieron de la base de datos MSigDB[^4].
-
-[^2]: Fisher, R.A. (1922). On the interpretation of χ² from contingency tables.
-
-[^3]: Benjamini, Y. & Hochberg, Y. (1995). Controlling the false discovery rate. *JRSS-B*, 57(1), 289-300.
-
-[^4]: Subramanian, A. et al. (2005). Gene set enrichment analysis. *PNAS*, 102(43), 15545-15550.
+El análisis de enriquecimiento se realizó usando el test de Fisher
+exacto[^2] con corrección de Benjamini-Hochberg[^3]. Los genes de
+referencia se obtuvieron de la base de datos MSigDB[^4].
 
 ## **Las foonotes se nos van al final del libro**
 
@@ -432,16 +471,23 @@ El análisis de enriquecimiento se realizó usando el test de Fisher exacto[^2] 
 **Markdown permite HTML cuando necesitas más control.**
 
 <details>
+<summary>
+🔬 Haz clic para ver los parámetros de Trimmomatic
+</summary>
 
-<summary>🔬 Haz clic para ver los parámetros de Trimmomatic</summary>
+  --------------------------------------------------------------------------
+  Parámetro       Valor                   Descripción
+  --------------- ----------------------- ----------------------------------
+  ILLUMINACLIP    TruSeq3-PE.fa:2:30:10   Recorte de adaptadores
 
-| Parámetro     | Valor                 | Descripción                        |
-|---------------|-----------------------|------------------------------------|
-| ILLUMINACLIP  | TruSeq3-PE.fa:2:30:10 | Recorte de adaptadores             |
-| LEADING       | 3                     | Elimina bases con Q \< 3 al inicio |
-| TRAILING      | 3                     | Elimina bases con Q \< 3 al final  |
-| SLIDINGWINDOW | 4:20                  | Ventana de 4 bases, Q media ≥ 20   |
-| MINLEN        | 36                    | Longitud mínima de lectura         |
+  LEADING         3                       Elimina bases con Q \< 3 al inicio
+
+  TRAILING        3                       Elimina bases con Q \< 3 al final
+
+  SLIDINGWINDOW   4:20                    Ventana de 4 bases, Q media ≥ 20
+
+  MINLEN          36                      Longitud mínima de lectura
+  --------------------------------------------------------------------------
 
 </details>
 
@@ -524,7 +570,8 @@ classDiagram
 
 # 16. YAML Front Matter.
 
-Bloque de metadatos al inicio del documento (usado en Jekyll, RMarkdown, Hugo, Quarto).\
+Bloque de metadatos al inicio del documento (usado en Jekyll, RMarkdown,
+Hugo, Quarto).\
 **ejm:**\
 31b8e172-b470-440e-83d8-e6b185028602:dAB5AHAAZQA6AFoAUQBBAHgAQQBEAGcAQQBNAFEAQQA1AEEARABZAEEATQBBAEEAMQBBAEMAMABBAE0AQQBCAGgAQQBHAE0AQQBaAEEAQQB0AEEARABRAEEAWgBnAEIAaABBAEcAVQBBAEwAUQBBADQAQQBHAEkAQQBPAFEAQQA1AEEAQwAwAEEATwBRAEIAagBBAEQARQBBAFkAZwBBADMAQQBHAEkAQQBaAEEAQQAzAEEARwBNAEEATQBBAEIAbQBBAEQARQBBAAoAcABvAHMAaQB0AGkAbwBuADoATQBRAEEAeQBBAEQATQBBAE4AdwBBADMAQQBBAD0APQAKAHAAcgBlAGYAaQB4ADoACgBzAG8AdQByAGMAZQA6AEwAUQBBAHQAQQBDADAAQQBDAGcAQgAwAEEARwBrAEEAZABBAEIAcwBBAEcAVQBBAE8AZwBBAGcAQQBDAEkAQQBRAFEAQgB1AEEATwBFAEEAYgBBAEIAcABBAEgATQBBAGEAUQBCAHoAQQBDAEEAQQBaAEEAQgBsAEEAQwBBAEEAYwB3AEIAagBBAEYASQBBAFQAZwBCAEIAQQBDADAAQQBjAHcAQgBsAEEASABFAEEASQBBAEIAawBBAEcAVQBBAEkAQQBCAFEAQQBFAEkAQQBUAFEAQgBEAEEASABNAEEASQBnAEEASwBBAEcARQBBAGQAUQBCADAAQQBHAGcAQQBiAHcAQgB5AEEARABvAEEASQBBAEEAaQBBAEUAUQBBAGMAZwBCAGgAQQBDADQAQQBJAEEAQgBOAEEARwBFAEEAYwBnAEQAdABBAEcARQBBAEkAQQBCAE0AQQBQAE0AQQBjAEEAQgBsAEEASABvAEEASQBnAEEASwBBAEcAUQBBAFkAUQBCADAAQQBHAFUAQQBPAGcAQQBnAEEAQwBJAEEATQBnAEEAdwBBAEQASQBBAE4AZwBBAHQAQQBEAEEAQQBOAHcAQQB0AEEARABFAEEATgBRAEEAaQBBAEEAbwBBAGIAdwBCADEAQQBIAFEAQQBjAEEAQgAxAEEASABRAEEATwBnAEEAZwBBAEEAbwBBAEkAQQBBAGcAQQBHAGcAQQBkAEEAQgB0AEEARwB3AEEAWAB3AEIAawBBAEcAOABBAFkAdwBCADEAQQBHADAAQQBaAFEAQgB1AEEASABRAEEATwBnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBkAEEAQgB2AEEARwBNAEEATwBnAEEAZwBBAEgAUQBBAGMAZwBCADEAQQBHAFUAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEgAUQBBAGEAQQBCAGwAQQBHADAAQQBaAFEAQQA2AEEAQwBBAEEAWgBnAEIAcwBBAEcARQBBAGQAQQBCAHMAQQBIAGsAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEcATQBBAGIAdwBCAGsAQQBHAFUAQQBYAHcAQgBtAEEARwA4AEEAYgBBAEIAawBBAEcAawBBAGIAZwBCAG4AQQBEAG8AQQBJAEEAQgBvAEEARwBrAEEAWgBBAEIAbABBAEEAbwBBAGMAQQBCAGgAQQBIAEkAQQBZAFEAQgB0AEEASABNAEEATwBnAEEASwBBAEMAQQBBAEkAQQBCAHQAQQBHAGsAQQBiAGcAQgBmAEEARwBjAEEAWgBRAEIAdQBBAEcAVQBBAGMAdwBBADYAQQBDAEEAQQBNAGcAQQB3AEEARABBAEEAQwBnAEEAZwBBAEMAQQBBAGMAZwBCAGwAQQBIAE0AQQBiAHcAQgBzAEEASABVAEEAZABBAEIAcABBAEcAOABBAGIAZwBBADYAQQBDAEEAQQBNAEEAQQB1AEEARABVAEEAQwBnAEEAZwBBAEMAQQBBAGIAdwBCAHkAQQBHAGMAQQBZAFEAQgB1AEEARwBrAEEAYwB3AEIAdABBAEQAbwBBAEkAQQBBAGkAQQBFAGcAQQBiAHcAQgB0AEEARwA4AEEASQBBAEIAegBBAEcARQBBAGMAQQBCAHAAQQBHAFUAQQBiAGcAQgB6AEEAQwBJAEEAQwBnAEEAZwBBAEMAQQBBAFoAdwBCAGwAQQBHADQAQQBiAHcAQgB0AEEARwBVAEEATwBnAEEAZwBBAEMASQBBAFIAdwBCAFMAQQBFAE0AQQBhAEEAQQB6AEEARABnAEEASQBnAEEASwBBAEMAMABBAEwAUQBBAHQAQQBBAD0APQAKAHMAdQBmAGYAaQB4ADoA:31b8e172-b470-440e-83d8-e6b185028602
 
@@ -535,12 +582,15 @@ Bloque de metadatos al inicio del documento (usado en Jekyll, RMarkdown, Hugo, Q
 Usa  para escapar caracteres especiales de Markdown.\
 **ejm:**
 
-\*Esto no es cursiva\* \# Esto no es un encabezado \[Esto no es un enlace\] \`Esto no es código\`
+\*Esto no es cursiva\* \# Esto no es un encabezado \[Esto no es un
+enlace\] \`Esto no es código\`
 
 Caracteres escapables:  \` \* \_ { } \[ \] ( ) \# + - . ! \| \~
 
 **Ejemplo práctico**\
-El comando `awk '{print $1}'` usa llaves y el signo `$`. Para escribir **C++** en Markdown, escapa los signos `+`. El cromosoma se denota como chr17:q21.31.
+El comando `awk '{print $1}'` usa llaves y el signo `$`. Para escribir
+**C++** en Markdown, escapa los signos `+`. El cromosoma se denota como
+chr17:q21.31.
 
 ------------------------------------------------------------------------
 
@@ -554,9 +604,14 @@ El comando `awk '{print $1}'` usa llaves y el signo `$`. Para escribir **C++** e
 
 ![**Texto alternativo**](fig/4.png "Título opcional")
 
-# Tips de conversion de formatos:
+[^1]: Fisher, R.A. (1922). On the interpretation of χ² from contingency
+    tables.
 
-instalar dentro de un entorno conda o miniconda:
+[^2]: Fisher, R.A. (1922). On the interpretation of χ² from contingency
+    tables.
 
- * conda install jupyter
- * quarto render 1-markdown.qmd --to markdown
+[^3]: Benjamini, Y. & Hochberg, Y. (1995). Controlling the false
+    discovery rate. *JRSS-B*, 57(1), 289-300.
+
+[^4]: Subramanian, A. et al. (2005). Gene set enrichment analysis.
+    *PNAS*, 102(43), 15545-15550.

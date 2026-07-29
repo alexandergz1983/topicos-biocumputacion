@@ -78,6 +78,50 @@ git push -u origin main
 
 # ya con esto hemos subido nuestro proyecto a github
 
+# como subir una nueva carpeta a la rama principal:
+# Me ubico dentro de la carpeta: 
+
+# ejecuto:
+git add .
+
+# ejecuto:
+git commit -m "Agrega la nueva carpeta y sus archivos"
+
+# ejecuto:
+git push -u origin main
+
+# como eliminar una carpeta:
+
+git rm -r nombre_de_tu_carpeta
+
+# para conservar localmente
+git rm -r --cached nombre_de_tu_carpeta
+
+git commit -m "Se elimina la carpeta nombre_de_tu_carpeta"
+
+# para conservar localmente
+git commit -m "Se elimina la carpeta de GitHub pero se conserva localmente"
+
+git push origin main
+
+# eliminar archivo en local y remoto, me ubico dentro de carpeta donde esta archivo de interes
+
+git rm 2-MARKDOWN-UNIX-GIT-GITHUB.pdf
+
+git commit -m "Eliminando desactualizado"
+
+git push origin main
+
+# actualizar un archivo, debe tener el mismo nombre 
+
+git add 2-MARKDOWN-UNIX-GIT-GITHUB.pdf
+
+git commit -m "Se actualiza el archivo pdf"
+
+git push origin main
+
+
+
 
 
 
