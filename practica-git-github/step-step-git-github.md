@@ -1,0 +1,136 @@
+# 1. TUTORIAL GIT - GITHUB
+
+ * **ejecuto:**
+
+   - git -version
+
+ * **ejecuto:**
+
+   - git config --global user.name alexandergz1983
+
+
+ * **ejecuto:**
+
+   - git config --global user.email alexander.gz1983@gmail.com
+
+ * **ejecuto:**
+
+   - git config --global --list
+
+ * Ahora vamos a nuestra carpeta donde tenemos nuestro proyecto, nos situamos dentro de ella o con mkdir podemos crearla
+ * En mi caso es pwd es /Users/bionformatics/Documents/topicos-biocumputacion
+ * En vuestro caso puede ser a partir de haber clonado el repositorio topicos-biocumputacion usando este comando:
+
+   - git clone **https://github.com/alexandergz1983/topicos-biocumputacion.git**
+
+ * En mi caso dentro de la carpeta topicos-biocumputacion/ daré permisos con chmod +x * nunca esta de mas
+
+ * ahora ustedes desde el archivo clonado o compartido en teams pueden seguir los sgtes pasos:
+
+ * **ejecuto:**
+
+   - git init
+
+ * **ejecuto:**
+
+   - git status
+
+   sale esto:
+   On branch main
+
+   No commits yet
+
+   Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+ 	 .DS_Store
+ 	 practica-markdown/
+ 	 practica-unix/
+
+   nothing added to commit but untracked files present (use "git add" to track)
+
+ * **ejecuto:**
+
+  - git add .
+
+ * **ejecuto:**
+
+  - git commit -m "Configuracion inicial de topicos en biocomputación"
+
+ * Ahora vamos a github, si no tenemos cuenta la crearmos con correo google gmail, es lo mas facil
+ * Luego, una vez dentro vamos a new y nos sale Create a new repository en general-Repository name * veran su nombre de su usario y al lado el nombre que quieran ponerle al repositorio, en mi caso: topicos-biocumputacion y le damos creating-repository
+
+ * Esto nos lleva a una nueva ventana y alli nos aparece en Quick setup el proyecto en mi caso:
+ * https://github.com/alexandergz1983/topicos-biocumputacion.git copiamos ese enlace
+
+ * **ejecuto:**
+
+  - git remote add origin **https://github.com/alexandergz1983/topicos-biocumputacion.git**
+
+ * **ejecuto:**
+ 
+  - git branch -M main
+
+ * **ejecuto:**
+
+  - git push -u origin main
+
+ * me pide nombre de usario o email, lo ingreso
+ * me pide clave pero es un token, lo ingreso
+
+ * ya con esto hemos subido nuestro proyecto a github
+
+ * como subir una nueva carpeta a la rama principal:
+ * Me ubico dentro de la carpeta: 
+
+ * **ejecuto:**
+ 
+  - git add .
+
+ * **ejecuto:**
+ 
+  - git commit -m "Agrega la nueva carpeta y sus archivos"
+
+ * **ejecuto:**
+ 
+  - git push -u origin main
+
+
+# 2. TIPS
+
+ * **como eliminar una carpeta:**
+
+  - git rm -r nombre_de_tu_carpeta
+
+ * **para conservar localmente**
+
+  - git rm -r --cached nombre_de_tu_carpeta
+
+  - git commit -m "Se elimina la carpeta nombre_de_tu_carpeta"
+
+ * **para conservar localmente**
+
+  - git commit -m "Se elimina la carpeta de GitHub pero se conserva localmente"
+
+  - git push origin main
+
+ * **eliminar archivo en local y remoto, me ubico dentro de carpeta donde esta archivo de interes**
+
+  - git rm 2-MARKDOWN-UNIX-GIT-GITHUB.pdf
+
+  - git commit -m "Eliminando desactualizado"
+
+  - git push origin main
+
+ * **actualizar un archivo, debe tener el mismo nombre**
+
+  - git add 2-MARKDOWN-UNIX-GIT-GITHUB.pdf
+
+  - git commit -m "Se actualiza el archivo pdf"
+
+  - git push origin main
+
+
+
+
+
+
