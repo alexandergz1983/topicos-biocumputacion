@@ -395,14 +395,6 @@ Resultados del variant calling:
 - [ ] Interpretación clínica (ACMG guidelines)
 - [ ] Subida de resultados a base de datos interna
 
-```{python}
-
-```
-
-```{python}
-
-```
-
 ------------------------------------------------------------------------
 
 # 13. Notas al Pie
@@ -453,7 +445,9 @@ Soportado en GitHub, GitLab y Obsidian.\
 Diagrama de Flujo (Pipeline)\
 **ejm:**.
 
-``` mermaid
+Diagrama de Flujo (Pipeline)  
+**ejm:**. 
+```{mermaid}
 graph TD
     A[FASTQ crudo] --> B[FastQC]
     B --> C[Trimmomatic]
@@ -473,7 +467,7 @@ graph TD
 
 **ejm: Diagrama de Gantt (Cronograma)**
 
-``` mermaid
+```{mermaid}
 gantt
     title Cronograma del Proyecto de Genómica
     dateFormat  YYYY-MM-DD
@@ -491,7 +485,7 @@ gantt
 
 **ejm: Diagrama de Clases (Estructura de datos)**
 
-``` mermaid
+```{mermaid}
 classDiagram
     class Genoma {
         +String especie
