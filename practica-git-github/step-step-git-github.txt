@@ -1,4 +1,4 @@
-# TUTORIAL GIT - GITHUB
+# 1. TUTORIAL GIT - GITHUB
 
 # ejecuto:
 
@@ -78,6 +78,10 @@ git push -u origin main
 
 # ya con esto hemos subido nuestro proyecto a github
 
+# si posteriormente queremos hacer modificaciones, siempre primero hacer git pull origin main, que nos mantiene al dia de los cambios
+
+git pull origin main
+
 # como subir una nueva carpeta a la rama principal:
 # Me ubico dentro de la carpeta: 
 
@@ -90,6 +94,7 @@ git commit -m "Agrega la nueva carpeta y sus archivos"
 # ejecuto:
 git push -u origin main
 
+# 2. TIPS
 # como eliminar una carpeta:
 
 git rm -r nombre_de_tu_carpeta
@@ -123,6 +128,18 @@ git add step-step-git-github.txt
 git commit -m "Se actualiza el archivo step-step-git-github.txt"
 
 git push origin main
+
+# agregar un nuevo archivo a una carpeta especifica
+# touch se usa si no hemos creado el archivo, es decir, crea un archivo en blanco para su edicion, ejmp:
+
+touch practica-git-github/step-step-git-github.md
+
+# si ya lo habiamos creado previamente y guardado en la carpeta inidicada solo es necesario:
+
+git add practica-git-github//step-step-git-github.md
+git commit -m "Agregar archivo existente a la carpeta"
+git push origin main
+
 
 
 
