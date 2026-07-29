@@ -123,11 +123,27 @@
 
  * **actualizar un archivo, debe tener el mismo nombre**
 
-  - git add 2-MARKDOWN-UNIX-GIT-GITHUB.pdf
+  - git add practica-git-github/step-step-git-github.txt 
 
-  - git commit -m "Se actualiza el archivo pdf"
+ * **o desde la ubicacion dentro del directorio donde este step-step-git-github.txt** 
 
-  - git push origin main
+ - git add step-step-git-github.txt 
+
+ - git commit -m "Se actualiza el archivo step-step-git-github.txt"
+
+ - git push origin main
+
+* **agregar un nuevo archivo a una carpeta especifica**
+* **touch se usa si no hemos creado el archivo, es decir, crea un archivo en blanco para su edicion, ejmp:** 
+
+ - touch practica-git-github/step-step-git-github.md
+
+* **si ya lo habiamos creado previamente y guardado en la carpeta inidicada solo es necesario:**
+
+ - git add practica-git-github//step-step-git-github.md
+ - git commit -m "Agregar archivo existente a la carpeta"
+ - git push origin main
+
 
 
 
