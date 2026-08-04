@@ -1,3 +1,9 @@
+# SUMMARY
+
+![**Mi figura**](fig/DOCKER.png)
+
+---
+
 # 🐳 Tutorial Completo de Docker para Bioinformática: De Cero a Entorno Reproducible
 
 > **Objetivo:** Aprender Docker desde la instalación hasta crear una imagen reproducible basada en un entorno Conda (`exploratorio`).
@@ -6,6 +12,7 @@
 
 ## Tabla de Contenidos
 
+- [SUMMARY](#summary)
 - [🐳 Tutorial Completo de Docker para Bioinformática: De Cero a Entorno Reproducible](#-tutorial-completo-de-docker-para-bioinformática-de-cero-a-entorno-reproducible)
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [1. ¿Por qué Docker en Bioinformática?](#1-por-qué-docker-en-bioinformática)
@@ -257,3 +264,4 @@ docker run --rm exploratorio2:1.0.0 python --version
 ```
 
 ---
+
