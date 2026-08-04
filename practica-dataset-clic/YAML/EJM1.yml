@@ -1,0 +1,13 @@
+name: exploratorio2
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python=3.9
+  - ncbi-datasets-cli
+  - unzip
+  - mafft
+  - muscle

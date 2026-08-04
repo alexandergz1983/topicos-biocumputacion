@@ -1,0 +1,21 @@
+name: exploratorio3
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python=3.9
+  - ncbi-datasets-cli
+  - unzip
+  - mafft
+  - muscle
+  
+  # Paquetes de Python vía pip
+  - pip
+  - pip:
+    - biopython>=1.83
+    - pandas>=2.0
+    - numpy>=1.24
+    - ete3
