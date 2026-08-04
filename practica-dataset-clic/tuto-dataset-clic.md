@@ -27,6 +27,8 @@
    - conda create --name exploratorio **python=3.9**
    - conda activate exploratorio
    - conda install conda-forge::ncbi-datasets-cli
+   - conda install bioconda::blast
+   - conda install bioconda::trimal
    - conda install conda-forge::unzip
    - conda install bioconda::mafft
    - mamba install mafft
