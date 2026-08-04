@@ -27,12 +27,12 @@
    - conda create --name exploratorio **python=3.9**
    - conda activate exploratorio
    - conda install conda-forge::ncbi-datasets-cli
+   - conda install bioconda::entrez-direct
    - conda install bioconda::blast
    - conda install bioconda::trimal
    - conda install conda-forge::unzip
    - conda install bioconda::mafft
    - mamba install mafft
-   
    - conda install bioconda::muscle
    - conda activate exploratorio
    - conda deactivate
